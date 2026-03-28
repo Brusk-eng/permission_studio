@@ -15,6 +15,8 @@ add_to_apps_screen = [
 		"name": "permission_studio",
 		"logo": "/assets/permission_studio/images/logo.svg",
 		"title": "Permission Studio",
-		"route": "/app/permission-studio",
+		# Frappe v14+ desk uses /desk/... paths; /app/... does not strip to a Page route.
+		"route": "/desk/permission-studio",
+		"has_permission": "permission_studio.api.matrix.has_studio_access",
 	}
 ]

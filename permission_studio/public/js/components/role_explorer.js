@@ -47,7 +47,7 @@ export class RoleExplorer {
 
 			mod.doctypes.forEach((row) => {
 				html += `<tr><td class="ps-col-doctype">
-					<a href="/app/${frappe.router.slug(row.doctype)}" target="_blank">${esc(row.doctype)}</a>
+					<a href="/desk/${frappe.router.slug(row.doctype)}" target="_blank">${esc(row.doctype)}</a>
 					${row.if_owner ? '<span class="ps-badge ps-badge-owner">if_owner</span>' : ""}
 				</td>`;
 

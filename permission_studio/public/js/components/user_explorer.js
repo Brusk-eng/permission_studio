@@ -104,7 +104,7 @@ export class UserExplorer {
 			shares_data.shares.forEach((s) => {
 				html += `<tr>
 					<td>${esc(s.doctype)}</td>
-					<td><a href="/app/${frappe.router.slug(s.doctype)}/${s.docname}">${esc(s.docname)}</a></td>
+					<td><a href="${frappe.utils.get_form_link(s.doctype, s.docname)}">${esc(s.docname)}</a></td>
 					<td>${s.read ? "\u2713" : "\u2717"}</td>
 					<td>${s.write ? "\u2713" : "\u2717"}</td>
 					<td>${s.share ? "\u2713" : "\u2717"}</td>

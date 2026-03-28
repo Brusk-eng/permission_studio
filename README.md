@@ -77,7 +77,7 @@ One dialog showing:
 
 ### Prerequisites
 
-- Frappe Framework (v14 or v15)
+- Frappe Framework (v14+; **v16** supported — desk routes use `/desk/...`)
 - System Manager role (required to access Permission Studio)
 
 ### Install
@@ -101,7 +101,7 @@ bench --site your-site.com clear-cache
 
 ### Access
 
-Navigate to: **`/app/permission-studio`**
+Navigate to: **`/desk/permission-studio`** (or open **Permission Studio** from the app switcher after install)
 
 Or find it in the Frappe App Launcher.
 
@@ -334,7 +334,7 @@ The resolution logic (`_compute_effective_perms`) for each permission type:
 - **Read-only by design** — Permission Studio never modifies permissions. It only reads and visualizes. Safe to use in production.
 - **No custom DocTypes** — The app uses only existing Frappe DocTypes (User, Role, DocPerm, Custom DocPerm, User Permission, DocShare). No database migrations needed.
 - **No external dependencies** — Pure Frappe. No npm packages, no Python libraries beyond what Frappe provides.
-- **Single page app** — Everything runs on one Frappe Page (`/app/permission-studio`). Components load on demand.
+- **Single page app** — Everything runs on one Frappe Page (`/desk/permission-studio`). Components load on demand.
 - **Batch queries** — `get_valid_perms(user=user)` fetches all permission rules in one query, not per-DocType. This keeps the User View fast even with 500+ DocTypes.
 
 ---

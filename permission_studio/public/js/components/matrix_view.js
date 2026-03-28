@@ -91,7 +91,7 @@ export class MatrixView {
 			html += `<tr class="ps-matrix-row" data-doctype="${esc(row.doctype)}">`;
 			html += `<td class="ps-col-module">${show_module ? esc(row.module) : ""}</td>`;
 			html += `<td class="ps-col-doctype">
-				<a href="/app/${frappe.router.slug(row.doctype)}" target="_blank">${esc(row.doctype)}</a>
+				<a href="/desk/${frappe.router.slug(row.doctype)}" target="_blank">${esc(row.doctype)}</a>
 			</td>`;
 
 			MATRIX_RIGHTS.forEach((r) => {
